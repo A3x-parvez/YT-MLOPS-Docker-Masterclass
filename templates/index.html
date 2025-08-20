@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool Form</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .form-container {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 40px 50px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      color: white;
+    }
+    .form-container h2 { margin-bottom: 20px; font-size: 24px; font-weight: 600; }
+    input[type="text"] {
+      padding: 12px 15px;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      outline: none;
+      transition: 0.3s ease;
+    }
+    input[type="text"]:focus { box-shadow: 0 0 8px #6a11cb; }
+    input[type="submit"] {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    input[type="submit"]:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Welcome 👋</h2>
+    <form action="/greet" method="POST">
+      <input type="text" name="username" placeholder="Enter your name" required>
+      <input type="text" name="userage" placeholder="Enter your age" required>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>

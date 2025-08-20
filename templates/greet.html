@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greeting</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff512f, #dd2476);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+    }
+    .greet-box {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 50px 70px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      animation: fadeIn 1s ease-in-out;
+    }
+    .greet-box h1 { font-size: 32px; margin-bottom: 15px; font-weight: 700; }
+    .greet-box p { font-size: 18px; opacity: 0.9; }
+    .back-btn {
+      margin-top: 25px;
+      display: inline-block;
+      padding: 12px 25px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #ff512f, #dd2476);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .back-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="greet-box">
+    <h1>Hello, {{ name }}! 👋</h1>
+    <p>Your age is {{ age }}.😃</p>
+    <p>Welcome to our awesome site.</p>
+    <a href="/" class="back-btn">⬅ Go Back</a>
+  </div>
+</body>
+</html>
